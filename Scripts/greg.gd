@@ -7,18 +7,18 @@ var direction : Vector2 = Vector2.ZERO
 @onready var sprite : Sprite2D = $Sprite2D
 
 func _ready() -> void:
-	state_machine.Intitialize(self)
+	state_machine.initialize(self)
 
-func _process( delta: float ) -> void:
+func _process( _delta: float ) -> void:
 	direction = Vector2( Input.get_axis ( "Input_Left" , "Input_Right" ) , ( Input.get_axis ( "Input_Up", "Input_Down" ) ) )
 	direction = direction.normalized()
 	pass
 
 
-func _physics_process( delta: float ) -> void:
+func _physics_process( _delta: float ) -> void:
 	move_and_slide()
 
-func SetDirection() -> bool:
+func set_direction() -> bool:
 	var new_dir : Vector2 = cardinal_direction
 	if direction == Vector2.ZERO:
 		return false

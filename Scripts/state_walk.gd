@@ -4,27 +4,27 @@ class_name State_Walk extends State
 
 @onready var idle : State = $"../Idle"
 
-func Enter() -> void:
+func enter() -> void:
 	#this is where i will update player animation
 	pass
 
-func Exit() -> void:
+func exit() -> void:
 	pass
 
-func Process( _delta : float) -> State:
+func process( _delta : float) -> State:
 	if player.direction == Vector2.ZERO:
 		return idle
 	
 	player.velocity = player.direction * move_speed
 	
-	if player.SetDirection():
+	if player.set_direction():
 		#Here is where I will update the player walk animation
 		pass
 	
 	return null
 
-func Physics( _delta : float) -> State:
+func physics( _delta : float) -> State:
 	return null
 
-func HandleInput( _event : InputEvent ) -> State:
+func handle_input( _event : InputEvent ) -> State:
 	return null
