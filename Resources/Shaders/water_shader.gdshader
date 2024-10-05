@@ -15,7 +15,5 @@ void fragment() {
 	vec2 uv = UV + TIME * speed;
 	vec2 noise = 2. * texture(noise_texture, uv).rg - vec2(1.);
 	
-	COLOR = texture(TEXTURE, UV);
-	COLOR *= texture(screen_texture, SCREEN_UV + noise * distortion);
-	
-}
+	COLOR = texture(TEXTURE, UV + noise * distortion);
+	COLOR *= texture(screen_texture, SCREEN_UV + noise * distortion);}
