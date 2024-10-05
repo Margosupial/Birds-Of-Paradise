@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://c824flfw8bqon"]
+
+[ext_resource type="Script" path="res://Scripts/greg.gd" id="1_34tc6"]
+[ext_resource type="Texture2D" uid="uid://dr2dw5bpib7c" path="res://Resources/Sprites/Greg.png" id="1_sscvx"]
+[ext_resource type="Script" path="res://Scripts/player_state_machine.gd" id="3_75ri1"]
+[ext_resource type="Script" path="res://Scripts/state_idle.gd" id="4_wiavt"]
+[ext_resource type="Script" path="res://Scripts/state_walk.gd" id="5_6mmdv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75v7a"]
+size = Vector2(8, 3)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 16
+motion_mode = 1
+wall_min_slide_angle = 0.174533
+script = ExtResource("1_34tc6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sscvx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_75v7a")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_75ri1")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_wiavt")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("5_6mmdv")
+move_speed = 60.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
