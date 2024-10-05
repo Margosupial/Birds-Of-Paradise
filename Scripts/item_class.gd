@@ -6,7 +6,7 @@ class_name Item
 @export_multiline var description : String
 
 @export var item_texture : Texture2D
-@export var entity_texture : PackedScene
+@export var entity : PackedScene
 
 @export var stackable : bool
 @export var stack_size : int
