@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwn6pemd2efyi"]
+[gd_scene load_steps=6 format=3 uid="uid://cwn6pemd2efyi"]
 
 [ext_resource type="Texture2D" uid="uid://dk15e57csj03k" path="res://Resources/Sprites/UI Resources/Panel Border 1.png" id="1_pmbpq"]
+[ext_resource type="Script" path="res://Scripts/UI Scripts/inventory_ui.gd" id="1_vopgb"]
 [ext_resource type="PackedScene" uid="uid://bb08ttlqmt37v" path="res://UI Elements/UI Subelements/item_slot.tscn" id="2_tfr85"]
 [ext_resource type="PackedScene" uid="uid://di0mv0vq8ftwx" path="res://UI Elements/UI Subelements/exit_button.tscn" id="3_d6yo8"]
 
@@ -15,8 +16,12 @@ texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 
-[node name="InventoryUI" type="CanvasLayer"]
+[node name="InventoryUI" type="CanvasLayer" node_paths=PackedStringArray("exit_button")]
+visible = false
 follow_viewport_scale = 2.0
+script = ExtResource("1_vopgb")
+input = &"Input_Inventory"
+exit_button = NodePath("Control/PanelContainer/PanelContainer/HBoxContainer/Exit Button")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -27,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
 layout_mode = 1
@@ -35,19 +41,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -499.0
-offset_top = -277.0
-offset_right = 505.0
-offset_bottom = 256.0
+offset_left = -164.0
+offset_top = -54.0
+offset_right = 164.0
+offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="ColorRect" type="ColorRect" parent="Control/PanelContainer"]
 layout_mode = 2
+mouse_filter = 1
 color = Color(0.195562, 0.149057, 0.0977607, 1)
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/PanelContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_dkogk")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer/PanelContainer"]
@@ -57,18 +66,51 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="ItemSlotGrid" type="GridContainer" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 columns = 4
 
-[node name="Item Slot" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/GridContainer" instance=ExtResource("2_tfr85")]
+[node name="Item Slot" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
 layout_mode = 2
 
-[node name="Item Slot2" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/GridContainer" instance=ExtResource("2_tfr85")]
+[node name="Item Slot2" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
 layout_mode = 2
 
-[node name="Item Slot3" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/GridContainer" instance=ExtResource("2_tfr85")]
+[node name="Item Slot3" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot4" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot5" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot6" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot7" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot8" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot9" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot10" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot11" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
+layout_mode = 2
+
+[node name="Item Slot12" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
 layout_mode = 2
 
 [node name="Exit Button" parent="Control/PanelContainer/PanelContainer/HBoxContainer" instance=ExtResource("3_d6yo8")]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0

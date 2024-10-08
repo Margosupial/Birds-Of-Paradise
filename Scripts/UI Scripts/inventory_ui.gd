@@ -1,0 +1,2 @@
+extends UI_Window
+class_name Inventory_UI

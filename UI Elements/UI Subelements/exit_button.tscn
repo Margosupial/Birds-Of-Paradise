@@ -1,19 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://di0mv0vq8ftwx"]
+[gd_scene load_steps=3 format=3 uid="uid://di0mv0vq8ftwx"]
 
 [ext_resource type="Texture2D" uid="uid://bd1lqb8cg4eig" path="res://Resources/Sprites/UI Resources/Exit Button.png" id="1_hup4r"]
+[ext_resource type="Script" path="res://Scripts/UI Scripts/exit_button.gd" id="1_rputb"]
 
 [node name="Exit Button" type="Control"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
+anchors_preset = 0
+offset_right = 32.0
+offset_bottom = 32.0
+mouse_filter = 1
+script = ExtResource("1_rputb")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("1_hup4r")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
