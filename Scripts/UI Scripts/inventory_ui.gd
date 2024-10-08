@@ -10,6 +10,7 @@ class_name Inventory_UI
 var inventory : Array[ Item_Slot ]
 
 func _ready() -> void:
+	assign_exit_button()
 	generate_inventory_slots()
 	pass
 
