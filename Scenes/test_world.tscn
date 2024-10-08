@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://du43wuo5xi3wb"]
+[gd_scene load_steps=6 format=4 uid="uid://du43wuo5xi3wb"]
 
 [ext_resource type="TileSet" uid="uid://bobmybmrntfxx" path="res://Resources/Tilesets/default.tres" id="1_rvhrg"]
 [ext_resource type="PackedScene" uid="uid://dwc2u4wwqguj7" path="res://Scenes/test_raft.tscn" id="2_1xt7f"]
+[ext_resource type="Resource" uid="uid://bb8f0r12yusal" path="res://Resources/Custom Resources/Inventory Data/inventory_data_test1.tres" id="2_s3xuo"]
 [ext_resource type="PackedScene" uid="uid://c824flfw8bqon" path="res://Scenes/greg.tscn" id="3_exupy"]
 [ext_resource type="PackedScene" uid="uid://cwn6pemd2efyi" path="res://UI Elements/UI Windows/inventory_ui.tscn" id="4_ufl7u"]
 
@@ -9,6 +10,7 @@
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_ufl7u")]
 inventory_size = 15
+inventory = ExtResource("2_s3xuo")
 
 [node name="Bottom" type="TileMapLayer" parent="."]
 position = Vector2(-9, -26)

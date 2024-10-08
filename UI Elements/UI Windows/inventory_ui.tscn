@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwn6pemd2efyi"]
+[gd_scene load_steps=5 format=3 uid="uid://cwn6pemd2efyi"]
 
 [ext_resource type="Texture2D" uid="uid://dk15e57csj03k" path="res://Resources/Sprites/UI Resources/Panel Border 1.png" id="1_pmbpq"]
 [ext_resource type="Script" path="res://Scripts/UI Scripts/inventory_ui.gd" id="1_vopgb"]
-[ext_resource type="PackedScene" uid="uid://bb08ttlqmt37v" path="res://UI Elements/UI Subelements/item_slot.tscn" id="2_tfr85"]
 [ext_resource type="PackedScene" uid="uid://di0mv0vq8ftwx" path="res://UI Elements/UI Subelements/exit_button.tscn" id="3_d6yo8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkogk"]
@@ -20,7 +19,6 @@ texture_margin_bottom = 4.0
 visible = false
 follow_viewport_scale = 2.0
 script = ExtResource("1_vopgb")
-item_slot = ExtResource("2_tfr85")
 input = &"Input_Inventory"
 exit_button = NodePath("Control/PanelContainer/PanelContainer/HBoxContainer/Exit Button")
 
