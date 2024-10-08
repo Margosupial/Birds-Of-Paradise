@@ -8,6 +8,7 @@
 [node name="TestWorld" type="Node2D"]
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_ufl7u")]
+inventory_size = 15
 
 [node name="Bottom" type="TileMapLayer" parent="."]
 position = Vector2(-9, -26)

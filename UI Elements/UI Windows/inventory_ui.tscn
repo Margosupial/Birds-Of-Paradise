@@ -20,6 +20,7 @@ texture_margin_bottom = 4.0
 visible = false
 follow_viewport_scale = 2.0
 script = ExtResource("1_vopgb")
+item_slot = ExtResource("2_tfr85")
 input = &"Input_Inventory"
 exit_button = NodePath("Control/PanelContainer/PanelContainer/HBoxContainer/Exit Button")
 
@@ -72,43 +73,7 @@ text = "Inventory"
 
 [node name="ItemSlotGrid" type="GridContainer" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-columns = 4
-
-[node name="Item Slot" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot2" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot3" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot4" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot5" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot6" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot7" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot8" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot9" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot10" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot11" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
-
-[node name="Item Slot12" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid" instance=ExtResource("2_tfr85")]
-layout_mode = 2
+columns = 5
 
 [node name="Exit Button" parent="Control/PanelContainer/PanelContainer/HBoxContainer" instance=ExtResource("3_d6yo8")]
 layout_mode = 2

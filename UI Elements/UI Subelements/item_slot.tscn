@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb08ttlqmt37v"]
+[gd_scene load_steps=3 format=3 uid="uid://bb08ttlqmt37v"]
 
 [ext_resource type="Texture2D" uid="uid://kehk7ootior0" path="res://Resources/Sprites/UI Resources/Inventory Slot 1.png" id="1_ncc47"]
+[ext_resource type="Script" path="res://UI Elements/UI Subelements/item_slot.gd" id="1_tc8df"]
 
 [node name="Item Slot" type="Control"]
 custom_minimum_size = Vector2(88, 88)
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_tc8df")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1

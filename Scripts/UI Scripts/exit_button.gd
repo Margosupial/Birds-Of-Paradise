@@ -8,5 +8,4 @@ func close_window() -> void:
 
 
 func _on_texture_button_pressed() -> void:
-	print("click!")
 	close_window()
