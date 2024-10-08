@@ -73,7 +73,13 @@ text = "Inventory"
 layout_mode = 2
 columns = 5
 
+[node name="AddWoodTestButton" type="Button" parent="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Add 1 Wood"
+
 [node name="Exit Button" parent="Control/PanelContainer/PanelContainer/HBoxContainer" instance=ExtResource("3_d6yo8")]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
+
+[connection signal="pressed" from="Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/AddWoodTestButton" to="." method="_on_add_wood_test_button_pressed"]

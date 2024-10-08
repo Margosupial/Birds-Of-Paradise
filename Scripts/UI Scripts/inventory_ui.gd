@@ -5,33 +5,26 @@ const INVENTORY_SLOT = preload("res://UI Elements/UI Subelements/item_slot.tscn"
 
 @onready var item_slot_grid: GridContainer = $Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid
 
-@export var inventory_size : int = 5
-@export var inventory : Inventory_Data 
-
-var inventory_grid : Array[ Item_Slot ]
+@export var inventory_size : int
+@export var inv_resource : Inventory_Data 
+@export var wood_button_test_inv_data : Inventory_Data
 
 
 func _ready() -> void:
-	assign_exit_button()
-	generate_inventory_slots()
-	update_inventory()
 	pass
 
-func generate_inventory_slots() -> void:
-	inventory_grid = []
-	for x in inventory_size:
-		var new_slot : Item_Slot = INVENTORY_SLOT.instantiate()
-		inventory_grid.append(new_slot)
-		item_slot_grid.add_child(new_slot)
-	pass
+func clear_inventory():
+	for child in get_children():
+		child.queue_free()
+
 
 func update_inventory() -> void:
-	if inventory != null:
-		if inventory.slots.size() <= inventory_size:
-			for x in inventory.slots.size():
-				var slot : Slot_Data = inventory.slots[x]
-				if slot != null and slot.quantity > 0 :
-					inventory_grid[x].slot_data = slot
-		else:
-			print("your inventory resource is too big")
+	for slot in inv_resource.slots:
+		var new_slot = INVENTORY_SLOT.instantiate()
+		add_child( new_slot )
+		new_slot.slot_data = slot
+
+
+
+func _on_add_wood_test_button_pressed() -> void:
 	pass

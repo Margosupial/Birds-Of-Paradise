@@ -1,9 +1,10 @@
 [gd_scene load_steps=13 format=4 uid="uid://du43wuo5xi3wb"]
 
 [ext_resource type="TileSet" uid="uid://bobmybmrntfxx" path="res://Resources/Tilesets/default.tres" id="1_rvhrg"]
-[ext_resource type="Script" path="res://Scripts/test_world.gd" id="1_vyg4q"]
+[ext_resource type="Resource" uid="uid://m24fxed5x5dw" path="res://Resources/Custom Resources/Inventory Data/inventory_data_test2.tres" id="2_1c7yd"]
 [ext_resource type="PackedScene" uid="uid://dwc2u4wwqguj7" path="res://Scenes/test_raft.tscn" id="2_1xt7f"]
 [ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/inventory_data.gd" id="3_5usme"]
+[ext_resource type="PackedScene" uid="uid://c824flfw8bqon" path="res://Scenes/greg.tscn" id="3_exupy"]
 [ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/slot_data.gd" id="4_bm0sc"]
 [ext_resource type="PackedScene" uid="uid://cwn6pemd2efyi" path="res://UI Elements/UI Windows/inventory_ui.tscn" id="4_ufl7u"]
 [ext_resource type="Resource" uid="uid://cbejj5wnoa475" path="res://Resources/Custom Resources/Item Resources/scrap.tres" id="5_q4d03"]
@@ -19,21 +20,15 @@ script = ExtResource("4_bm0sc")
 item_data = ExtResource("5_s3iq1")
 quantity = 1
 
-[sub_resource type="Resource" id="Resource_yvy01"]
-script = ExtResource("4_bm0sc")
-item_data = ExtResource("5_s3iq1")
-quantity = 2
-
 [sub_resource type="Resource" id="Resource_71hok"]
 script = ExtResource("3_5usme")
-slots = Array[ExtResource("4_bm0sc")]([SubResource("Resource_5aj7q"), SubResource("Resource_g4xsn"), SubResource("Resource_yvy01")])
+slots = Array[ExtResource("4_bm0sc")]([SubResource("Resource_5aj7q"), SubResource("Resource_g4xsn")])
 
 [node name="TestWorld" type="Node2D"]
-y_sort_enabled = true
-script = ExtResource("1_vyg4q")
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_ufl7u")]
 inventory_size = 15
+inventory = ExtResource("2_1c7yd")
 wood_button_test_inv_data = SubResource("Resource_71hok")
 
 [node name="Bottom" type="TileMapLayer" parent="."]
@@ -48,4 +43,6 @@ tile_map_data = PackedByteArray("AAD3//n/AAAAAAAAAAD3//r/AAAAAAAAAAD3//v/AAAAAAA
 tile_set = ExtResource("1_rvhrg")
 
 [node name="TestRaft" parent="." instance=ExtResource("2_1xt7f")]
-y_sort_enabled = true
+
+[node name="Greg" parent="." instance=ExtResource("3_exupy")]
+position = Vector2(16, -16)

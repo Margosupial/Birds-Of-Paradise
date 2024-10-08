@@ -12,5 +12,5 @@ script = ExtResource("1_r8wq3")
 name = "Scrap"
 description = ""
 item_texture = SubResource("AtlasTexture_67nln")
-stackable = false
-stack_size = 0
+stackable = true
+stack_size = 100

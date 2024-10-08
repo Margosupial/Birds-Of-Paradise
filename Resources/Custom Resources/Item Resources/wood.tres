@@ -13,4 +13,4 @@ name = "Wood"
 description = "Woodn't you like to know"
 item_texture = SubResource("AtlasTexture_hpe7v")
 stackable = true
-stack_size = 10
+stack_size = 100
