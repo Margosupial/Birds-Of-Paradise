@@ -30,9 +30,8 @@ func update_inventory() -> void:
 		if inventory.slots.size() <= inventory_size:
 			for x in inventory.slots.size():
 				var slot : Slot_Data = inventory.slots[x]
-				if slot.item_data != null and slot.quantity > 0 :
-					inventory_grid[x].item_count.text = str(slot.quantity)
-					inventory_grid[x].item_texture.texture_normal = slot.item_data.item_texture
+				if slot != null and slot.quantity > 0 :
+					inventory_grid[x].slot_data = slot
 		else:
 			print("your inventory resource is too big")
 	pass
