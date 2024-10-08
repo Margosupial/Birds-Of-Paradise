@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kehk7ootior0"
-path="res://.godot/imported/Inventory Slot 1.png-eb274a261e6c6a4aee6805d10b70bd94.ctex"
+uid="uid://bd1lqb8cg4eig"
+path="res://.godot/imported/Exit Button.png-4925fc853ed7e6ed8997d4b3a79f6a7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/Items Sprites/Inventory Slot 1.png"
-dest_files=["res://.godot/imported/Inventory Slot 1.png-eb274a261e6c6a4aee6805d10b70bd94.ctex"]
+source_file="res://Resources/Sprites/UI Resources/Exit Button.png"
+dest_files=["res://.godot/imported/Exit Button.png-4925fc853ed7e6ed8997d4b3a79f6a7e.ctex"]
 
 [params]
 

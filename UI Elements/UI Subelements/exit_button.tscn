@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://di0mv0vq8ftwx"]
+
+[ext_resource type="Texture2D" uid="uid://bd1lqb8cg4eig" path="res://Resources/Sprites/UI Resources/Exit Button.png" id="1_hup4r"]
+
+[node name="Exit Button" type="Control"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_hup4r")

@@ -1,24 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bb08ttlqmt37v"]
+[gd_scene load_steps=2 format=3 uid="uid://bb08ttlqmt37v"]
 
-[ext_resource type="Texture2D" uid="uid://kehk7ootior0" path="res://Resources/Sprites/Items Sprites/Inventory Slot 1.png" id="1_ncc47"]
-[ext_resource type="Texture2D" uid="uid://dnaynpq38n0ht" path="res://Resources/Sprites/Items Sprites/Test Items 1.png" id="2_8t7rd"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_777eg"]
-atlas = ExtResource("2_8t7rd")
-region = Rect2(32, 0, 16, 16)
+[ext_resource type="Texture2D" uid="uid://kehk7ootior0" path="res://Resources/Sprites/UI Resources/Inventory Slot 1.png" id="1_ncc47"]
 
 [node name="Item Slot" type="Control"]
+custom_minimum_size = Vector2(88, 88)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 offset_right = 16.0
 offset_bottom = 16.0
+scale = Vector2(4, 4)
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer"]
 layout_mode = 2
@@ -28,11 +21,9 @@ texture = ExtResource("1_ncc47")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = SubResource("AtlasTexture_777eg")
 
 [node name="Item Count" type="Label" parent="PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 9
-text = "0"
