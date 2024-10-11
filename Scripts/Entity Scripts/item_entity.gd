@@ -17,10 +17,17 @@ func _ready() -> void:
 
 
 func _on_body_entered(body) -> void:
+	if body is Player:
+		if item_data:
+			if PlayerManager.INVENTORY_DATA.add_item( item_data ):
+				item_picked_up()
 	pass
 
 
 func item_picked_up() -> void :
+	area_2d.body_entered.disconnect( _on_body_entered )
+	visible = false
+	queue_free()
 	pass
 
 
@@ -30,4 +37,6 @@ func _set_item_data(value : Item) -> void:
 
 
 func _update_texture() -> void:
+	if item_data and sprite_2d:
+		sprite_2d.texture = item_data.entity_texture
 	pass

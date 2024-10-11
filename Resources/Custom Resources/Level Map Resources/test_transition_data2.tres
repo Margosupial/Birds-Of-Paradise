@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LocalTransitionData" load_steps=2 format=3 uid="uid://xtmxrwd3lnpa"]
+
+[ext_resource type="Script" path="res://Resources/Custom Resources/Level Map Resources/local_transition_data.gd" id="1_8kbf0"]
+
+[resource]
+script = ExtResource("1_8kbf0")
+level = "res://Scenes/Levels/test_world.tscn"
+target_transition_area = "LevelTransition"

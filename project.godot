@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RaftwoD"
-run/main_scene="res://Scenes/test_world.tscn"
+run/main_scene="res://Scenes/Levels/test_world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,7 +19,9 @@ config/icon="res://icon.svg"
 
 SaveManager="*res://Scripts/Autoloads/Autoload Scripts/global_save_manager.gd"
 PauseMenu="*res://Scripts/Autoloads/Autload Scenes/pause menu.tscn"
-GlobalPlayerManager="*res://Scripts/Autoloads/Autoload Scripts/global_player_manager.gd"
+PlayerManager="*res://Scripts/Autoloads/Autoload Scripts/global_player_manager.gd"
+LevelManager="*res://Scripts/Autoloads/Autoload Scripts/global_level_manager.gd"
+SceneTransition="*res://UI Elements/UI Subelements/scene_transition.tscn"
 
 [input]
 

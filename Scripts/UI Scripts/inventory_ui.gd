@@ -10,9 +10,6 @@ const INVENTORY_SLOT = preload("res://UI Elements/UI Subelements/item_slot.tscn"
 @export var wood_button_test_inv_data : Inventory_Data
 
 
-func _ready() -> void:
-	pass
-
 func clear_inventory():
 	for child in get_children():
 		child.queue_free()

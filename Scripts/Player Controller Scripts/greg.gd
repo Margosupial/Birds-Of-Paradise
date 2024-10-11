@@ -6,6 +6,11 @@ var direction : Vector2 = Vector2.ZERO
 @onready var state_machine : PlayerStateMachine = $StateMachine
 @onready var sprite : Sprite2D = $Sprite2D
 
+
+@export var hp : int = 100
+@export var max_hp : int = 100
+
+
 func _ready() -> void:
 	state_machine.initialize(self)
 

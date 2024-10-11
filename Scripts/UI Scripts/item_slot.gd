@@ -17,3 +17,4 @@ func _update_slot_data(new_slot_data : Slot_Data):
 		return
 	item_texture.texture = new_slot_data.item_data.item_texture
 	item_count.text = str( slot_data.quantity)
+ 
