@@ -6,7 +6,7 @@ signal enemy_damaged
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
-
+@onready var enemy_state_machine: EnemyStateMachine = $EnemyStateMachine
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var hp : int = 1
@@ -17,8 +17,12 @@ var player : Player
 var invulnerable : bool = false
 
 
+func _ready() -> void:
+	enemy_state_machine.initialize( self )
+	player = PlayerManager.player
+	pass
 
-func _physics_process(delta: float) -> void:
+func _physics_process( _delta: float) -> void:
 	move_and_slide()
 
 func set_direction( _new_direction ) -> bool:
@@ -30,8 +34,8 @@ func set_direction( _new_direction ) -> bool:
 			( direction + cardinal_direction * 0.1 ).angle()
 			/ TAU + DIR_4.size()
 	))
-	var new_dir = DIR_4[ direction_id ]
-	
+	#This part is fucked, the "-1" seemingly fixes it but i dont know why
+	var new_dir = DIR_4[ direction_id - 1]
 	if new_dir == cardinal_direction:
 		return false
 	cardinal_direction = new_dir

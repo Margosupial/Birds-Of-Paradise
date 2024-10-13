@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://lbrvwavoifxe"]
+[gd_scene load_steps=7 format=3 uid="uid://lbrvwavoifxe"]
 
 [ext_resource type="Texture2D" uid="uid://dabd0dxegbj2j" path="res://Resources/Sprites/Enemies/Evil Morty.png" id="1_0dvob"]
 [ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/enemy.gd" id="1_612gu"]
+[ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/enemy_state_machine.gd" id="3_a2jfh"]
+[ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/Enemy States/Evil Morty/enemy_state_idle.gd" id="4_tus13"]
+[ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/Enemy States/Evil Morty/enemy_state_wander.gd" id="5_pbtax"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pqhn"]
 radius = 5.0
@@ -15,3 +18,14 @@ texture = ExtResource("1_0dvob")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_1pqhn")
+
+[node name="EnemyStateMachine" type="Node" parent="."]
+script = ExtResource("3_a2jfh")
+
+[node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
+script = ExtResource("4_tus13")
+next_state = NodePath("../Wander")
+
+[node name="Wander" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
+script = ExtResource("5_pbtax")
+next_state = NodePath("../Idle")

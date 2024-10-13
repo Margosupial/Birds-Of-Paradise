@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/inventory_data.gd" id="1_6vbio"]
 [ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/slot_data.gd" id="2_5w1gq"]
-[ext_resource type="Resource" uid="uid://bre5m5c0l0ma6" path="res://Resources/Custom Resources/Item Resources/wood.tres" id="3_wqaso"]
+[ext_resource type="Resource" uid="uid://cbejj5wnoa475" path="res://Resources/Custom Resources/Item Resources/scrap.tres" id="3_5dbeo"]
 
-[sub_resource type="Resource" id="Resource_edxh4"]
+[sub_resource type="Resource" id="Resource_erpc1"]
 script = ExtResource("2_5w1gq")
-item_data = ExtResource("3_wqaso")
-quantity = 69
+item_data = ExtResource("3_5dbeo")
+quantity = 1
 
 [resource]
 script = ExtResource("1_6vbio")
-slots = Array[ExtResource("2_5w1gq")]([SubResource("Resource_edxh4")])
+slots = Array[ExtResource("2_5w1gq")]([SubResource("Resource_erpc1")])

@@ -7,21 +7,21 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-	assign_exit_button()
+	_assign_exit_button()
 	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(input):
-		toggle_visible()
+		_toggle_visible()
 
 
-func toggle_visible():
+func _toggle_visible():
 	if self.visible == false:
 		self.visible = true
 	else:
 		self.visible = false
 
-func assign_exit_button() -> void:
+func _assign_exit_button() -> void:
 	if exit_button != null:
 		exit_button.parent_window = self
 	pass

@@ -10,15 +10,30 @@ const INVENTORY_SLOT = preload("res://UI Elements/UI Subelements/item_slot.tscn"
 @export var wood_button_test_inv_data : Inventory_Data
 
 
+func _ready() -> void:
+	_assign_exit_button()
+	clear_inventory()
+	
+	pass
+
+func _toggle_visible():
+	if self.visible == false:
+		self.visible = true
+		update_inventory()
+	else:
+		self.visible = false
+		clear_inventory()
+
+
 func clear_inventory():
-	for child in get_children():
+	for child in item_slot_grid.get_children():
 		child.queue_free()
 
 
 func update_inventory() -> void:
 	for slot in inv_resource.slots:
 		var new_slot = INVENTORY_SLOT.instantiate()
-		add_child( new_slot )
+		item_slot_grid.add_child( new_slot )
 		new_slot.slot_data = slot
 
 

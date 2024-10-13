@@ -1,34 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://du43wuo5xi3wb"]
+[gd_scene load_steps=7 format=4 uid="uid://du43wuo5xi3wb"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_1cd7w"]
 [ext_resource type="PackedScene" uid="uid://cwn6pemd2efyi" path="res://UI Elements/UI Windows/inventory_ui.tscn" id="2_1srpa"]
 [ext_resource type="Resource" uid="uid://dd175c5obidlu" path="res://Resources/Custom Resources/Level Map Resources/test_transition_data1.tres" id="2_8woh2"]
-[ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/inventory_data.gd" id="3_amjym"]
-[ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/slot_data.gd" id="4_om4sf"]
-[ext_resource type="Resource" uid="uid://cbejj5wnoa475" path="res://Resources/Custom Resources/Item Resources/scrap.tres" id="5_3jgho"]
-[ext_resource type="Resource" uid="uid://bre5m5c0l0ma6" path="res://Resources/Custom Resources/Item Resources/wood.tres" id="6_e4wtf"]
 [ext_resource type="TileSet" uid="uid://bobmybmrntfxx" path="res://Resources/Tilesets/default.tres" id="7_o2ko0"]
 [ext_resource type="PackedScene" uid="uid://dwc2u4wwqguj7" path="res://Scenes/test_raft.tscn" id="8_ob7o7"]
 [ext_resource type="PackedScene" uid="uid://dwrf0wlkwyjhv" path="res://Scenes/Entities/item_entity.tscn" id="10_su00a"]
-
-[sub_resource type="Resource" id="Resource_5aj7q"]
-script = ExtResource("4_om4sf")
-item_data = ExtResource("5_3jgho")
-quantity = 100
-
-[sub_resource type="Resource" id="Resource_g4xsn"]
-script = ExtResource("4_om4sf")
-item_data = ExtResource("6_e4wtf")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_yvy01"]
-script = ExtResource("4_om4sf")
-item_data = ExtResource("6_e4wtf")
-quantity = 2
-
-[sub_resource type="Resource" id="Resource_71hok"]
-script = ExtResource("3_amjym")
-slots = Array[ExtResource("4_om4sf")]([SubResource("Resource_5aj7q"), SubResource("Resource_g4xsn"), SubResource("Resource_yvy01")])
 
 [node name="TestWorld" type="Node2D"]
 y_sort_enabled = true
@@ -39,8 +16,7 @@ local_transition_data = ExtResource("2_8woh2")
 position = Vector2(9, -100)
 
 [node name="InventoryUI" parent="." instance=ExtResource("2_1srpa")]
-inventory_size = 15
-wood_button_test_inv_data = SubResource("Resource_71hok")
+visible = false
 
 [node name="Bottom" type="TileMapLayer" parent="."]
 position = Vector2(-9, -26)
