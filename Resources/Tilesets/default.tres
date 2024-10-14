@@ -1,6 +1,5 @@
-[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://bobmybmrntfxx"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://bobmybmrntfxx"]
 
-[ext_resource type="Material" uid="uid://crb605jkrb1nk" path="res://Resources/Shaders/water_shader.tres" id="1_sr13r"]
 [ext_resource type="Texture2D" uid="uid://b0sovvnlmt4pg" path="res://Resources/Sprites/Tiles/Dirt Tile.png" id="2_ai2k3"]
 [ext_resource type="Shader" path="res://Resources/Shaders/dirt_shader.gdshader" id="2_i7gnv"]
 
@@ -12,7 +11,6 @@ resource_name = "Water Texture"
 texture = SubResource("CompressedTexture2D_jylbq")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
-0:0/0/material = ExtResource("1_sr13r")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_l4x3j"]
 frequency = 0.009
