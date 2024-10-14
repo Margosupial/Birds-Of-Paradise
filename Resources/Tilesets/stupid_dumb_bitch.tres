@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=9 format=3 uid="uid://bobmybmrntfxx"]
 
-[ext_resource type="Texture2D" uid="uid://b0sovvnlmt4pg" path="res://Resources/Sprites/Tiles/Dirt Tile.png" id="2_ai2k3"]
-[ext_resource type="Shader" path="res://Resources/Shaders/dirt_shader.gdshader" id="2_i7gnv"]
+[ext_resource type="Shader" path="res://Resources/Shaders/dirt_shader.gdshader" id="1_by8o3"]
+[ext_resource type="Texture2D" uid="uid://b0sovvnlmt4pg" path="res://Resources/Sprites/Tiles/Dirt Tile.png" id="2_skc1s"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jylbq"]
 load_path = "res://.godot/imported/Water Tile 1.png-4be4beecf6cb7656efff2c4d1c53efac.ctex"
@@ -21,11 +21,11 @@ seamless_blend_skirt = 1.0
 noise = SubResource("FastNoiseLite_l4x3j")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l5naf"]
-shader = ExtResource("2_i7gnv")
+shader = ExtResource("1_by8o3")
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_5pjhk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nyen"]
-texture = ExtResource("2_ai2k3")
+texture = ExtResource("2_skc1s")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/material = SubResource("ShaderMaterial_l5naf")

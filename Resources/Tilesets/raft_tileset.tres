@@ -1,0 +1,32 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c03b6mgo0slpb"]
+
+[ext_resource type="Texture2D" uid="uid://bh5pxh0011pbp" path="res://Resources/Sprites/Tiles/Raft Tile 1.png" id="1_6ixmv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0h8k"]
+texture = ExtResource("1_6ixmv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+3:4/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_v0h8k")
