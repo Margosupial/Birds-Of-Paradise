@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://bvrx2gvsxtpiw"]
+
+[ext_resource type="Script" path="res://Resources/Custom Resources/Item Resources/item_data.gd" id="1_1bj7d"]
+[ext_resource type="Texture2D" uid="uid://dnaynpq38n0ht" path="res://Resources/Sprites/Items Sprites/Test Items 1.png" id="1_ddb6u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6wbc"]
+atlas = ExtResource("1_ddb6u")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yalv"]
+atlas = ExtResource("1_ddb6u")
+region = Rect2(112, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_1bj7d")
+name = ""
+description = "Don't shoot this. Trust me."
+item_texture = SubResource("AtlasTexture_7yalv")
+entity_texture = SubResource("AtlasTexture_k6wbc")
+stackable = false
+stack_size = 0

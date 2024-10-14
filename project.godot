@@ -17,10 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SaveManager="*res://Scripts/Autoloads/Autoload Scripts/global_save_manager.gd"
-PauseMenu="*res://Scripts/Autoloads/Autload Scenes/pause menu.tscn"
-PlayerManager="*res://Scripts/Autoloads/Autoload Scripts/global_player_manager.gd"
-LevelManager="*res://Scripts/Autoloads/Autoload Scripts/global_level_manager.gd"
+SaveManager="*res://Scripts/Autoload Scripts/global_save_manager.gd"
+PauseMenu="*res://Scenes/Autload Scenes/pause menu.tscn"
+PlayerManager="*res://Scripts/Autoload Scripts/global_player_manager.gd"
+LevelManager="*res://Scripts/Autoload Scripts/global_level_manager.gd"
 SceneTransition="*res://UI Elements/UI Subelements/scene_transition.tscn"
 
 [input]

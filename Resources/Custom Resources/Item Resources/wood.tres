@@ -13,7 +13,7 @@ region = Rect2(32, 0, 16, 16)
 
 [resource]
 script = ExtResource("1_jp2t1")
-name = "Wood"
+name = ""
 description = "Woodn't you like to know"
 item_texture = SubResource("AtlasTexture_hpe7v")
 entity_texture = SubResource("AtlasTexture_543jw")

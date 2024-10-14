@@ -18,8 +18,8 @@ func _ready() -> void:
 
 func _toggle_visible():
 	if self.visible == false:
-		self.visible = true
 		update_inventory()
+		self.visible = true
 	else:
 		self.visible = false
 		clear_inventory()
