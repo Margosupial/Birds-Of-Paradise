@@ -13,8 +13,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	change_state( current_state.process( delta) )
-	
-	pass
+
 
 func _physics_process(delta: float) -> void:
 	change_state( current_state.physics( delta ) )

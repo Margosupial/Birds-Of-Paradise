@@ -39,4 +39,3 @@ position = Vector2(-60, -56)
 item_data = ExtResource("8_1wj67")
 
 [node name="EvilMorty" parent="." instance=ExtResource("10_wats0")]
-position = Vector2(96, -50)

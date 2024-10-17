@@ -30,12 +30,12 @@ func set_direction( _new_direction ) -> bool:
 	if direction == Vector2.ZERO:
 		return false
 	
-	var direction_id : int = int(round( 
+	var direction_id : int = ( int( round( 
 			( direction + cardinal_direction * 0.1 ).angle()
-			/ TAU + DIR_4.size()
-	))
-	#This part is fucked, the "-1" seemingly fixes it but i dont know why
-	var new_dir = DIR_4[ direction_id - 1]
+			/ TAU + DIR_4.size() ) - 1
+	) )
+	#This part is fucked, the "-1"   ^   seemingly fixes it but i dont know why
+	var new_dir = DIR_4[ direction_id ]
 	if new_dir == cardinal_direction:
 		return false
 	cardinal_direction = new_dir

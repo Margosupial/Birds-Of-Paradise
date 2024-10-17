@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="Inventory_Data" load_steps=18 format=3 uid="uid://bb8f0r12yusal"]
+
+[ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/inventory_data.gd" id="1_6vbio"]
+[ext_resource type="Script" path="res://Resources/Custom Resources/Inventory Data/slot_data.gd" id="2_5w1gq"]
+
+[sub_resource type="Resource" id="Resource_j7ywd"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_3dkpj"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_hlivl"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_o7swk"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_ax334"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_klgqf"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_x45f7"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_5l62n"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_27cl1"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_wvfhu"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_t8q3o"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_fkf15"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_ywi8k"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_r330m"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_81fsi"]
+script = ExtResource("2_5w1gq")
+quantity = 0
+
+[resource]
+script = ExtResource("1_6vbio")
+slots = Array[ExtResource("2_5w1gq")]([SubResource("Resource_j7ywd"), SubResource("Resource_3dkpj"), SubResource("Resource_hlivl"), SubResource("Resource_o7swk"), SubResource("Resource_ax334"), SubResource("Resource_klgqf"), SubResource("Resource_x45f7"), SubResource("Resource_5l62n"), SubResource("Resource_27cl1"), SubResource("Resource_wvfhu"), SubResource("Resource_t8q3o"), SubResource("Resource_fkf15"), SubResource("Resource_ywi8k"), SubResource("Resource_r330m"), SubResource("Resource_81fsi")])
+inventory_size = 15

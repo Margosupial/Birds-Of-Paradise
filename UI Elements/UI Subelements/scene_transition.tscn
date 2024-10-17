@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cs8q4e0qhevc0"]
 
-[ext_resource type="Script" path="res://Scripts/UI Scripts/scene_transition.gd" id="1_6mxlj"]
+[ext_resource type="Script" path="res://Scenes/Autoload Scenes/scene_transition.gd" id="1_6mxlj"]
 
 [sub_resource type="Animation" id="Animation_xmsh1"]
 resource_name = "default"

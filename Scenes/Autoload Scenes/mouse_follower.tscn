@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://5ph6yq77sx2s"]
+
+[ext_resource type="Script" path="res://Scripts/Autoload Scripts/mouse_follower.gd" id="1_trrmp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6nu8s"]
+
+[node name="MouseFollower" type="Control"]
+visibility_layer = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_trrmp")
+
+[node name="ClickDragGroup" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 13.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6nu8s")
+
+[node name="ItemTexture" type="TextureRect" parent="ClickDragGroup"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ItemCount" type="Label" parent="ClickDragGroup"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 9
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

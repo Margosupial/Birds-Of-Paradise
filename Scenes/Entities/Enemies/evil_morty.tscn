@@ -1,15 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://lbrvwavoifxe"]
+[gd_scene load_steps=12 format=3 uid="uid://lbrvwavoifxe"]
 
 [ext_resource type="Texture2D" uid="uid://dabd0dxegbj2j" path="res://Resources/Sprites/Enemies/Evil Morty.png" id="1_0dvob"]
 [ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/enemy.gd" id="1_612gu"]
 [ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/enemy_state_machine.gd" id="3_a2jfh"]
 [ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/Enemy States/Evil Morty/enemy_state_idle.gd" id="4_tus13"]
 [ext_resource type="Script" path="res://Scripts/Entity Scripts/Enemy Scripts/Enemy States/Evil Morty/enemy_state_wander.gd" id="5_pbtax"]
+[ext_resource type="Script" path="res://Resources/Custom Resources/Item Resources/Enemy Drop Data/drop_data.gd" id="6_nhj4h"]
+[ext_resource type="Resource" uid="uid://bre5m5c0l0ma6" path="res://Resources/Custom Resources/Item Resources/wood.tres" id="7_tbhhy"]
+[ext_resource type="Resource" uid="uid://cbejj5wnoa475" path="res://Resources/Custom Resources/Item Resources/scrap.tres" id="8_llhgc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pqhn"]
 radius = 5.0
 
+[sub_resource type="Resource" id="Resource_cspk0"]
+script = ExtResource("6_nhj4h")
+item = ExtResource("7_tbhhy")
+probability = 100.0
+min_amount = 2.0
+max_amount = 5.0
+
+[sub_resource type="Resource" id="Resource_wk1wp"]
+script = ExtResource("6_nhj4h")
+item = ExtResource("8_llhgc")
+probability = 100.0
+min_amount = 1.0
+max_amount = 2.0
+
 [node name="EvilMorty" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 24
+motion_mode = 1
 script = ExtResource("1_612gu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -29,3 +49,5 @@ next_state = NodePath("../Wander")
 [node name="Wander" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
 script = ExtResource("5_pbtax")
 next_state = NodePath("../Idle")
+drops = Array[ExtResource("6_nhj4h")]([SubResource("Resource_cspk0"), SubResource("Resource_wk1wp")])
+drop_speed = 100

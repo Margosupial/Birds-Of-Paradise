@@ -5,24 +5,22 @@ const INVENTORY_SLOT = preload("res://UI Elements/UI Subelements/item_slot.tscn"
 
 @onready var item_slot_grid: GridContainer = $Control/PanelContainer/PanelContainer/HBoxContainer/VBoxContainer/ItemSlotGrid
 
-@export var inventory_size : int
-@export var inv_resource : Inventory_Data 
-@export var wood_button_test_inv_data : Inventory_Data
+@export var inv_size : int = 15
+@export var inv_resource : Inventory_Data
 
 
 func _ready() -> void:
 	_assign_exit_button()
 	clear_inventory()
-	
-	pass
+	inv_resource.changed.connect( _on_inventory_changed )
+
 
 func _toggle_visible():
 	if self.visible == false:
 		update_inventory()
-		self.visible = true
 	else:
-		self.visible = false
 		clear_inventory()
+	self.visible = not self.visible
 
 
 func clear_inventory():
@@ -38,5 +36,13 @@ func update_inventory() -> void:
 
 
 
-func _on_add_wood_test_button_pressed() -> void:
-	pass
+func _on_inventory_changed() -> void:
+	clear_inventory()
+	update_inventory()
+	
+	
+	
+	
+	
+	
+	

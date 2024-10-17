@@ -1,27 +1,105 @@
-[gd_scene load_steps=7 format=3 uid="uid://c824flfw8bqon"]
+[gd_scene load_steps=14 format=3 uid="uid://c824flfw8bqon"]
 
 [ext_resource type="Script" path="res://Scripts/Player Controller Scripts/greg.gd" id="1_34tc6"]
 [ext_resource type="Texture2D" uid="uid://dr2dw5bpib7c" path="res://Resources/Sprites/Greg.png" id="1_sscvx"]
 [ext_resource type="Script" path="res://Scripts/Player Controller Scripts/player_state_machine.gd" id="3_75ri1"]
 [ext_resource type="Script" path="res://Scripts/Player Controller Scripts/state_idle.gd" id="4_wiavt"]
 [ext_resource type="Script" path="res://Scripts/Player Controller Scripts/state_walk.gd" id="5_6mmdv"]
+[ext_resource type="Script" path="res://Scripts/Player Controller Scripts/interactions.gd" id="6_d50hn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75v7a"]
 size = Vector2(8, 3)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsxhb"]
+size = Vector2(14, 17)
+
+[sub_resource type="Animation" id="Animation_1se77"]
+resource_name = "idle_down"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_iu5a2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1h06e"]
+resource_name = "idle_up"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_2fss0"]
+resource_name = "idle_side"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0fpn1"]
+_data = {
+"RESET": SubResource("Animation_iu5a2"),
+"idle_down": SubResource("Animation_1se77"),
+"idle_side": SubResource("Animation_2fss0"),
+"idle_up": SubResource("Animation_1h06e")
+}
+
+[node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
-collision_mask = 16
+position = Vector2(0, -2)
+collision_mask = 24
 motion_mode = 1
 wall_min_slide_angle = 0.174533
 script = ExtResource("1_34tc6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_sscvx")
+hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.5)
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_75v7a")
+debug_color = Color(0.710711, 0.485695, 9.62615e-07, 0.42)
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_75ri1")
@@ -35,3 +113,22 @@ move_speed = 60.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+
+[node name="Interactions" type="Node2D" parent="."]
+script = ExtResource("6_d50hn")
+
+[node name="Area2D" type="Area2D" parent="Interactions"]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Area2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_wsxhb")
+debug_color = Color(0.347378, 0.484125, 1, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0fpn1")
+}
+autoplay = "idle_down"

@@ -19,7 +19,6 @@ texture_margin_bottom = 4.0
 visible = false
 follow_viewport_scale = 2.0
 script = ExtResource("1_pniwr")
-inventory_size = 16
 input = &"Input_Inventory"
 exit_button = NodePath("Control/PanelContainer/PanelContainer/HBoxContainer/Exit Button")
 

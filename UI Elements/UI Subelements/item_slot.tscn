@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb08ttlqmt37v"]
+[gd_scene load_steps=4 format=3 uid="uid://bb08ttlqmt37v"]
 
 [ext_resource type="Texture2D" uid="uid://kehk7ootior0" path="res://Resources/Sprites/UI Resources/Inventory Slot 1.png" id="1_ncc47"]
 [ext_resource type="Script" path="res://Scripts/UI Scripts/item_slot.gd" id="1_tc8df"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1cqvr"]
 
 [node name="Item Slot" type="Button"]
 custom_minimum_size = Vector2(88, 88)
@@ -14,17 +16,25 @@ layout_mode = 1
 offset_right = 16.0
 offset_bottom = 16.0
 scale = Vector2(4, 4)
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer"]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("1_ncc47")
 
-[node name="Item Texture" type="TextureRect" parent="PanelContainer"]
+[node name="ClickDragGroup" type="PanelContainer" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1cqvr")
+
+[node name="ItemTexture" type="TextureRect" parent="PanelContainer/ClickDragGroup"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 2
 
-[node name="Item Count" type="Label" parent="PanelContainer"]
+[node name="ItemCount" type="Label" parent="PanelContainer/ClickDragGroup"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8

@@ -1,10 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://bda24v20pvv8x"]
 
-[ext_resource type="Script" path="res://Scripts/Autoload Scripts/pause_menu.gd" id="1_s20b4"]
+[ext_resource type="Script" path="res://Scripts/Autoload Scripts/pause_menu.gd" id="1_2mweq"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_s20b4")
+layer = 3
+script = ExtResource("1_2mweq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

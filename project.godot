@@ -18,10 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 SaveManager="*res://Scripts/Autoload Scripts/global_save_manager.gd"
-PauseMenu="*res://Scenes/Autload Scenes/pause menu.tscn"
 PlayerManager="*res://Scripts/Autoload Scripts/global_player_manager.gd"
 LevelManager="*res://Scripts/Autoload Scripts/global_level_manager.gd"
+PauseMenu="*res://Scenes/Autoload Scenes/pause menu.tscn"
 SceneTransition="*res://UI Elements/UI Subelements/scene_transition.tscn"
+MouseFollower="*res://Scenes/Autoload Scenes/mouse_follower.tscn"
 
 [input]
 
@@ -55,14 +56,25 @@ Input_Menu={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+Kill_Test={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+Input_Interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
-2d_render/layer_3="water"
-2d_render/layer_4="raft"
-2d_render/layer_5="furniture"
-2d_render/layer_6="player"
+2d_render/layer_1="Windows"
+2d_render/layer_2="Overlay"
+2d_render/layer_3="Items"
+2d_render/layer_4="Pause"
 2d_physics/layer_1="Player"
+2d_physics/layer_3="PlayerInteraction"
 2d_physics/layer_4="Walls"
 2d_physics/layer_5="WaterEdges"
 

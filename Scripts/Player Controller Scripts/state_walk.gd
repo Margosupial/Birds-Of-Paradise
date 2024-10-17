@@ -5,7 +5,7 @@ class_name State_Walk extends State
 @onready var idle : State = $"../Idle"
 
 func enter() -> void:
-	#this is where i will update player animation
+	player.update_animation()
 	pass
 
 func exit() -> void:
@@ -18,7 +18,7 @@ func process( _delta : float) -> State:
 	player.velocity = player.direction * move_speed
 	
 	if player.set_direction():
-		#Here is where I will update the player walk animation
+		player.update_animation()
 		pass
 	
 	return null

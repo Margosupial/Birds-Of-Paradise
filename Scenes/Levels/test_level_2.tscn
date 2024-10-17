@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://dybuv3lnbnvpa"]
 
-[ext_resource type="Script" path="res://Scripts/level.gd" id="1_v8s36"]
+[ext_resource type="Script" path="res://Scripts/World Scene Scripts/level.gd" id="1_v8s36"]
 [ext_resource type="Script" path="res://Resources/Custom Resources/Level Map Resources/local_transition_data.gd" id="2_3t6w2"]
 [ext_resource type="TileSet" uid="uid://c03b6mgo0slpb" path="res://Resources/Tilesets/raft_tileset.tres" id="2_631it"]
 [ext_resource type="PackedScene" uid="uid://cwn6pemd2efyi" path="res://UI Elements/UI Windows/player_inventory.tscn" id="4_xghni"]

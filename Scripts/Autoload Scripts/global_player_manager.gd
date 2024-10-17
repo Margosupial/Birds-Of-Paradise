@@ -1,7 +1,7 @@
 extends Node
 
 const GREG = preload("res://Scenes/Entities/greg.tscn")
-const INVENTORY_DATA : Inventory_Data = preload("res://Resources/Custom Resources/Inventory Data/inventory_data_test1.tres")
+const INVENTORY_DATA : Inventory_Data = preload("res://Resources/Custom Resources/Inventory Data/player_inventory.tres")
 
 
 var player : Player
